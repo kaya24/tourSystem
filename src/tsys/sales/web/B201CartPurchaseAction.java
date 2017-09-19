@@ -34,12 +34,15 @@ public class B201CartPurchaseAction implements ActionInterface{
 		// 各商品の予約人数、小計を設定
 		int orderTotal = 0;
 		for( int i=0; i < itemList.size(); i++){
-			itemList.get(i).setQuantity(Integer.parseInt(quantity[i]));
-			//itemList.get(i).setSubTotal(Integer.parseInt(total[i]));
-			//orderTotal += Integer.parseInt(total[i]);
+			int n = Integer.parseInt(quantity[i]);
+			itemList.get(i).setQuantity(n);
+			int unitPrice = itemList.get(i).getUnitPrice();
+			itemList.get(i).setSubTotal(unitPrice * n);
+			orderTotal += unitPrice * n;
 		}
 
 		itemList.get(0).setTotal(orderTotal);
+		req.setAttribute("OrderTotal", orderTotal);
 		session.setAttribute("B201ShoppingCart", itemList);
 
 		return page;
