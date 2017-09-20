@@ -56,7 +56,7 @@ public class FrontController extends HttpServlet {
 			break;
 
 		// 顧客ヘッダー [ログイン]
-		case "bc000_Login":
+		case "BC000Login":
 			action = new BC000LoginAction();
 			page = action.execute(req);
 			break;
@@ -135,6 +135,14 @@ public class FrontController extends HttpServlet {
 			action = new B201CartPurchaseAction();
 			page = action.execute(req);
 			break;
+
+		//会員登録 [登録]
+		case "B901RegistEntry":
+			action = new B201CartPurchaseAction();
+			page = action.execute(req);
+			break;
+
+
 		}
 
 
