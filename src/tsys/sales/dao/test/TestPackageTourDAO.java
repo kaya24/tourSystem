@@ -54,8 +54,8 @@ public class TestPackageTourDAO {
 				System.out.println("商品名:" +packageTour.getItemName());
 				System.out.println("地区コード:" +packageTour.getDestinationCode());
 				System.out.println("ホテル商品コード:" +packageTour.getHotel().getItemCode());
-				System.out.println("フライト往路商品コード:" +packageTour.getFlight().getDepartureAirportCode());
-				System.out.println("フライト復路商品コード:" +packageTour.getFlight().getArrivalAirportCode());
+				System.out.println("フライト往路商品コード:" +packageTour.getHomeFlight().getDepartureAirportCode());
+				System.out.println("フライト復路商品コード:" +packageTour.getHomeFlight().getArrivalAirportCode());
 				System.out.println("日数:" + packageTour.getDays());
 				System.out.println("宿泊数:" + packageTour.getNights());
 				System.out.println("開催日:" + packageTour.getDate());
