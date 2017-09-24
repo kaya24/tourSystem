@@ -126,7 +126,7 @@ public class PackageTourDAO {
 				Flight flight = new Flight();
 				flight.setDepartureAirportCode(res.getString("outwardflightitemcode"));
 				flight.setArrivalAirportCode(res.getString("homewardflightitemcode"));
-				packageTour.setFlight(flight);
+				packageTour.setHomeFlight(flight);
 
 				packageTour.setDays(res.getInt("days")); // 日数
 				packageTour.setNights(res.getInt("nights")); // 宿泊数

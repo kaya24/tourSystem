@@ -136,7 +136,7 @@ public class OrderMasterDAO {
 			// SQLを実行する。
 			int count = stmt.executeUpdate();
 
-			if (count == order.getOrderDetailList().size() + 1) {
+			if (count == (order.getOrderDetailList().size() + 1)) {
 				deleteCheck = true;
 			}
 
