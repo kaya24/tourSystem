@@ -9,12 +9,10 @@ public class PackageTour extends Item{
 	private String destinationName;
 	private int days;
 	private int nights;
-	//private String firstHotelItemCode;
-	//private String outFlightItemCode;
-	//private String homeFlightItemCode;
 	private String date;
 	private int basicPrice;
-	private Flight flight;
+	private Flight homeFlight;
+	private Flight outFlight;
 	private Hotel hotel;
 
 	/**
@@ -102,17 +100,30 @@ public class PackageTour extends Item{
 	public void setBasicPrice(int basicPrice) {
 		this.basicPrice = basicPrice;
 	}
+
 	/**
-	 * @return flight
+	 * @return homeFlight
 	 */
-	public Flight getFlight() {
-		return flight;
+	public Flight getHomeFlight() {
+		return homeFlight;
 	}
 	/**
-	 * @param flight セットする flight
+	 * @param homeFlight セットする homeFlight
 	 */
-	public void setFlight(Flight flight) {
-		this.flight = flight;
+	public void setHomeFlight(Flight homeFlight) {
+		this.homeFlight = homeFlight;
+	}
+	/**
+	 * @return outFlight
+	 */
+	public Flight getOutFlight() {
+		return outFlight;
+	}
+	/**
+	 * @param outFlight セットする outFlight
+	 */
+	public void setOutFlight(Flight outFlight) {
+		this.outFlight = outFlight;
 	}
 	/**
 	 * @return hotel
