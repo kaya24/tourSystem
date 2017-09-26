@@ -1,3 +1,13 @@
+-- 簡易受注検索
+select tour.itemcode
+from (orderdetail inner join tour on orderdetail.itemcode = tour.itemcode)
+union
+select hotel.itemcode
+from (orderdetail inner join hotel on orderdetail.itemcode = hotel.itemcode)
+union
+select flight.itemcode
+from (orderdetail inner join flight on orderdetail.itemcode = flight.itemcode)
+
 -- 月別集計
 select ordermaster.MemberCode, ordermaster.OrderDate, member.Name, ordermaster.OrderTotal
 from ordermaster, member where ordermaster.MemberCode = member.MemberCode and

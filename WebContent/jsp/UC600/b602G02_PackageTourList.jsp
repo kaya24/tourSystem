@@ -39,7 +39,7 @@
 	<tr>
 		<th>商品コード</th>
 		<td>
-		<a href="/tourSystem/FrontCont?BUTTON_ID=b601_PackageTourDetail
+		<a href="/tourSystem/FrontCont?BUTTON_ID=B602PackageTourListDetail
 		&itemCode=<c:out value="${packageTour.itemCode}"></c:out>">
 		<c:out value="${packageTour.itemCode}"></c:out>
 		</a>

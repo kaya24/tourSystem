@@ -13,10 +13,10 @@ public class MemberManagerLogic {
 	public Member loginMember(String memberCode, String password) throws SalesBusinessException{
 
 		Connection con = null;
-		con = ConnectionManager.getConnection();
 		Member member = null;
 		MemberDAO mdao = new MemberDAO(con);
 		try {
+			con = ConnectionManager.getConnection();
 			member = mdao.getMember(memberCode, password);
 			if(member == null){
 				throw new SalesBusinessException();

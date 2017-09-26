@@ -18,7 +18,7 @@
       <!--ヘッダー部分-->
          <div id="header">
         <div id="boxA">
-          <a href="/tourSystem/FrontCont?BUTTON_ID=bc000_Logo">
+          <a href="/tourSystem/FrontCont?BUTTON_ID=BC000Logo">
             FLMTours
           </a>
         </div>
@@ -27,8 +27,8 @@
                   <li>ようこそ、FLMToursへ</li>
                   <li><a href="#">新規会員登録</a></li>
                   <li><a href="#">注文内容／キャンセル</a></li>
-                  <li><a href="/tourSystem/FrontCont?BUTTON_ID=bc000_Login">ログイン</a></li>
-                  <li><a href="/tourSystem/FrontCont?BUTTON_ID=bc000_Logout">セッションリセット</a></li>
+                  <li><a href="/tourSystem/FrontCont?BUTTON_ID=BC000Login">ログイン</a></li>
+                  <li><a href="/tourSystem/FrontCont?BUTTON_ID=BC000Logout">セッションリセット</a></li>
                 </ul>
             </div>
       </div>
@@ -38,7 +38,7 @@
       <!--ヘッダー部分-->
          <div id="header">
         <div id="boxA">
-          <a href="/tourSystem/FrontCont?BUTTON_ID=bc001_CustTop">
+          <a href="/tourSystem/FrontCont?BUTTON_ID=BC001CustTop">
             FLMTours
           </a>
         </div>
@@ -47,14 +47,14 @@
 	              <li>こんにちは　<c:out value="${CommonLoginMember.memberName}"></c:out>さん</li>
                   <li><a href="#">会員情報照会</a></li>
                   <li><a href="#">注文内容／キャンセル</a></li>
-                  <li><a href="/tourSystem/FrontCont?BUTTON_ID=bc000_Logout">ログアウト</a></li>
+                  <li><a href="/tourSystem/FrontCont?BUTTON_ID=BC000Logout">ログアウト</a></li>
                 </ul>
             </div>
       </div>
 	</c:if>
 
       <ul id="dropmenu">
-          <li><a href="/tourSystem/FrontCont?BUTTON_ID=bc001_PackageTour">パッケージツアー</a>
+          <li><a href="/tourSystem/FrontCont?BUTTON_ID=BC001PackageTour">パッケージツアー</a>
         </li>
 
         <li><a href="#">航空券</a>
@@ -63,7 +63,7 @@
         <li><a href="#">ホテル</a>
         </li>
 
-        <li><a href="/tourSystem/FrontCont?BUTTON_ID=bc000_ShoppingCart">ショッピングカート</a>
+        <li><a href="/tourSystem/FrontCont?BUTTON_ID=BC000ShoppingCart">ショッピングカート</a>
         </li>
 
         </ul>

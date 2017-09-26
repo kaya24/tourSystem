@@ -46,7 +46,7 @@
 				</table>
 			</div>
 			<button class="bt-samp31" type="submit"
-				onclick="this.form.BUTTON_ID.value='b202_OrderDeleteCheck';
+				onclick="this.form.BUTTON_ID.value='B202OrderDeleteCheck';
 									this.form.itemCode.value='<c:out value="${ItemList.itemCode}"></c:out>'">
 				取消</button>
 		</form>

@@ -19,6 +19,12 @@ public class MemberDAO {
 	}
 
 
+	public Member getTelMember(String tel) throws SQLException{
+		Member member = new Member();
+
+		return member;
+	}
+
 	public Member getMember(String memberCode, String password) throws SQLException{
 		String sql = "select membercode, name, password, role, mail, zipcode, prefecture, address, tel from member where membercode=? and password=?";
 

@@ -25,7 +25,7 @@
 
 <table>
   <tr>
-    <th>ログイン</th>
+    <th>メンバーコード</th>
     <td><input type="text" name="memberCode" size="40" required></td>
   </tr>
   <tr>
@@ -35,8 +35,13 @@
   <tr>
   	<th></th>
     <td align="center">
-    <button class="bt-samp31" type="submit" onclick="this.form.BUTTON_ID.value='b101_Login';">
+    <button class="bt-samp31" type="submit" onclick="this.form.BUTTON_ID.value='BC000Login';">
       ログイン
+    </button>
+    </td>
+    <td>
+        <button class="bt-samp31" type="submit" onclick="this.form.BUTTON_ID.value='BC000MmeberRegist';">
+      新規会員登録
     </button>
     </td>
   </tr>

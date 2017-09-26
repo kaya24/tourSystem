@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class FrontController
  */
-@WebServlet("/FrontCont")
+@WebServlet("/FrontCont1")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -108,13 +108,13 @@ public class FrontController extends HttpServlet {
 
 		// パッケージツアー商品詳細 [カートに入れる]
 		case "b601_DetailPutCart":
-			action = new B801DetailPutCartAction();
+			action = new B601DetailPutCartAction();
 			page = action.execute(req);
 			break;
 
 		// パッケージツアー商品詳細 [カートを見る]
 		case "b601_DetailViewCart":
-			action = new B801DetailViewCartAction();
+			action = new B601DetailViewCartAction();
 			page = action.execute(req);
 			break;
 

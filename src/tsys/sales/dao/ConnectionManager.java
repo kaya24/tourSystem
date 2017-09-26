@@ -10,7 +10,7 @@ public class ConnectionManager {
 	private static String user = "root";
 	private static String pass = "mysql";
 
-	public static Connection getConnection() {
+	public static Connection getConnection() throws SQLException{
 		Connection con = null;
 		try {
 			Class.forName(driverName);

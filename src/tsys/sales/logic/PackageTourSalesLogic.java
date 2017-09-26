@@ -22,11 +22,11 @@ public class PackageTourSalesLogic {
 	public ArrayList<PackageTour> searchPackageTour(String destinationCode, String year, String month) throws SalesBusinessException, SalesSystemException{
 
 		Connection con = null;
-		con = ConnectionManager.getConnection();
 		PackageTourDAO pdao = new PackageTourDAO(con);
 		ArrayList<PackageTour> packageTourList = new ArrayList<>();
 
 		try {
+			con = ConnectionManager.getConnection();
 			packageTourList = pdao.getPackageTour(destinationCode, year, month);
 
 			if(packageTourList.size() == 0){
@@ -52,11 +52,11 @@ public class PackageTourSalesLogic {
 	public PackageTour getPackageTour(String itemCode) throws SalesBusinessException, SalesSystemException{
 
 		Connection con = null;
-		con = ConnectionManager.getConnection();
 		PackageTourDAO pdao = new PackageTourDAO(con);
 		PackageTour packageTour = new PackageTour();
 
 		try {
+			con = ConnectionManager.getConnection();
 			packageTour = pdao.getPackageTour(itemCode);
 
 			if(packageTour.equals(null)){

@@ -13,9 +13,9 @@ public class TestPackageTourDAO {
 	public static void main(String[] args) {
 
 		Connection con = null;
-		con = ConnectionManager.getConnection();
 
 		try {
+			con = ConnectionManager.getConnection();
 
 			/*DAO生成テスト*/
 			PackageTourDAO pdao = new PackageTourDAO(con);

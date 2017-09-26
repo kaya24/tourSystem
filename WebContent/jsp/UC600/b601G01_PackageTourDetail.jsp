@@ -63,17 +63,17 @@
 				<tr>
 					<td>
 						<button class="bt-samp31" type="submit"
-							onclick="this.form.BUTTON_ID.value='b601_DetailListBack';">
+							onclick="this.form.BUTTON_ID.value='B601DetailListBack';">
 							戻る</button>
 					</td>
 					<td>
 						<button class="bt-samp31" type="submit"
-							onclick="this.form.BUTTON_ID.value='b601_DetailPutCart';">
+							onclick="this.form.BUTTON_ID.value='B601DetailPutCart';">
 							カートに入れる</button>
 					</td>
 					<td>
 						<button class="bt-samp31" type="submit"
-							onclick="this.form.BUTTON_ID.value='b601_DetailViewCart';">
+							onclick="this.form.BUTTON_ID.value='B601DetailViewCart';">
 							カートを見る</button>
 					</td>
 				</tr>

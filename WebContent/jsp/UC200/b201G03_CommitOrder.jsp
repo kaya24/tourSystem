@@ -32,7 +32,7 @@
     <td>d</td>
     <td>e</td>
     <td>
-    <button class="bt-samp31" type="submit" onclick="this.form.BUTTON_ID.value='SHOPPING_CART';
+    <button class="bt-samp31" type="submit" onclick="this.form.BUTTON_ID.value='';
       this.form.itemCode.value='<c:out value="${ShoppingCart.itemCode}"></c:out>';">
       削除
       </button>

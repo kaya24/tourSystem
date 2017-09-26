@@ -7,7 +7,7 @@
 <br><br>
 
 	<footer>
-	<div><a href="/tourSystem/FrontCont?BUTTON_ID=bc000_Logo">TOPページ</a></div>
+	<div><a href="/tourSystem/FrontCont?BUTTON_ID=BC000Logo">TOPページ</a></div>
 	Copyright© 株式会社エフ・エル・エム・ツアーズ All Rights Reserved
 	</footer>
 </html>

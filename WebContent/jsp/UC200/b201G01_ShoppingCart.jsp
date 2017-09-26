@@ -30,7 +30,7 @@
 				var price = $('.unitPrice').eq(i).text();
 				price = parseInt(price.split(',').join('').trim());
 				var total = quantity * price;
-				$('.total').eq(i).text(addFigure(total));
+				$('.subtotal').eq(i).text(addFigure(total));
 				all += total;
 			}
 			$('#all').text(addFigure(all));
@@ -45,7 +45,7 @@
 				var price = $('.unitPrice').eq(i).text();
 				price = parseInt(price.split(',').join('').trim());
 				var total = quantity * price;
-				$('.total').eq(i).text(addFigure(total));
+				$('.subtotal').eq(i).text(addFigure(total));
 				all += total;
 			}
 			$('#all').text(addFigure(all));
@@ -65,9 +65,9 @@
 		</div>
 
 		<form method="post" action="/tourSystem/FrontCont">
-			<input type="hidden" name="BUTTON_ID" value=""> <input
-				type="hidden" name="itemCode" value=""> <input type="hidden"
-				name="categoryCode" value="">
+			<input type="hidden" name="BUTTON_ID" value="">
+			<input type="hidden" name="itemCode" value="">
+			<input type="hidden" name="categoryCode" value="">
 
 			<div style="color: blue; font-weight: bold;">
 				<c:out value="${requestScope.RemoveMessage}"></c:out>
@@ -92,7 +92,7 @@
 							varStatus="status">
 							<tr>
 								<td><a
-									href="/tourSystem/FrontCont?BUTTON_ID=b201_CartDetailBack
+									href="/tourSystem/FrontCont?BUTTON_ID=B201CartDetailBack
 								&categoryCode=<c:out value="${itemList.categoryCode}"></c:out>
 								&itemCode=<c:out value="${itemList.itemCode}"></c:out>">
 										<c:out value="${itemList.itemCode}"></c:out>
@@ -110,10 +110,10 @@
 													value="${qua.index}"></c:out></option>
 										</c:forEach>
 								</select></td>
-								<td class="total"><c:out value="${itemList.unitPrice}"></c:out>
+								<td class="subtotal"><c:out value="${itemList.unitPrice}"></c:out>
 								</td>
 								<td><button class="bt-samp31" type="submit"
-										onclick="this.form.BUTTON_ID.value='b201_CartDelete';
+										onclick="this.form.BUTTON_ID.value='B201CartDelete';
 									this.form.itemCode.value='<c:out value="${itemList.itemCode}"></c:out>'">
 										削除</button></td>
 							</tr>
@@ -126,8 +126,9 @@
 							<td></td>
 						</tr>
 					</table>
+
 					<button class="bt-samp31" type="submit"
-						onclick="this.form.BUTTON_ID.value='b201_CartPurchase';">
+						onclick="this.form.BUTTON_ID.value='B201CartPurchase';">
 						購入</button>
 
 				</div>

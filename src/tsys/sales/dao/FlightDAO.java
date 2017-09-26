@@ -10,20 +10,20 @@ import tsys.sales.entity.Flight;
 import tsys.sales.entity.Hotel;
 import tsys.sales.entity.PackageTour;
 
-public class PackageTourDAO {
+public class FlightDAO {
 
 	Connection con;
 
-	public PackageTourDAO(Connection con) {
+	public FlightDAO(Connection con) {
 		this.con = con;
 	}
 
-	public boolean updateStockPacakgeTour(String itemCode, int quanitity){
+
+	public boolean updateStockFlight(String itemCode, int quanitity){
 		boolean updateCheck = false;
 
 		return updateCheck;
 	}
-
 
 	/**
 	 * パッケージツアー商品一覧を取得する

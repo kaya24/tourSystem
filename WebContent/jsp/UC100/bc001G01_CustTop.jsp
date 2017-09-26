@@ -21,7 +21,7 @@
 	<input type="hidden" name="BUTTON_ID" value="">
 	<div>
 	<div>パッケージツアー検索はこちら</div>
-		<button class="bt-samp31" type="submit" onclick="this.form.BUTTON_ID.value='bc001_PackageTour';">
+		<button class="bt-samp31" type="submit" onclick="this.form.BUTTON_ID.value='BC001PackageTour';">
     	検索
     	</button>
 	</div>

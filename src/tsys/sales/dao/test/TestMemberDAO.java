@@ -13,9 +13,9 @@ public class TestMemberDAO {
 	public static void main(String[] args) {
 
 		Connection con = null;
-		con = ConnectionManager.getConnection();
 
 		try{
+			con = ConnectionManager.getConnection();
 			MemberDAO mdao = new MemberDAO(con);
 			Member member = null;
 			String memberCode = "CM0001";

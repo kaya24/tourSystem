@@ -19,8 +19,8 @@
 		</div>
 
 		<form method="post" action="/tourSystem/FrontCont">
-			<input type="hidden" name="BUTTON_ID" value=""> <input
-				type="hidden" name="itemCode" value="">
+			<input type="hidden" name="BUTTON_ID" value="">
+			<input type="hidden" name="itemCode" value="">
 
 			<div>購入商品情報</div>
 			<table>
@@ -36,30 +36,26 @@
 					varStatus="status">
 					<tr>
 						<td><a
-							href="/tourSystem/FrontCont?BUTTON_ID=b201_CartDetailBack
+							href="/tourSystem/FrontCont?BUTTON_ID=B201CartDetailBack
 								&categoryCode=<c:out value="${itemList.categoryCode}"></c:out>
 								&itemCode=<c:out value="${itemList.itemCode}"></c:out>">
 								<c:out value="${itemList.itemCode}"></c:out>
 						</a></td>
 						<td><c:out value="${itemList.itemName}"></c:out></td>
-						<td class="unitPrice">
-						<fmt:formatNumber
+						<td class="unitPrice"><fmt:formatNumber
 								value="${itemList.unitPrice}" /></td>
-						<td>
-						<c:out value="${itemList.quantity}">></c:out>
-						</td>
-						<td>
-						<fmt:formatNumber
-								value="${itemList.subTotal}" />
-						</td>
+						<td><c:out value="${itemList.quantity}">></c:out></td>
+						<td><fmt:formatNumber value="${itemList.subTotal}" /></td>
 					</tr>
 				</c:forEach>
 				<tr>
-					<th colspan="5">合計</th>
-					<td><fmt:formatNumber
-								value="${itemList[0].total}" /></td>
+					<th colspan="4">合計</th>
+					<td><fmt:formatNumber value="${requestScope.OrderTotal}" /></td>
 				</tr>
 			</table>
+					<button class="bt-samp31" type="submit"
+						onclick="this.form.BUTTON_ID.value='B201CartPurchase';">
+						</button>
 
 		</form>
 

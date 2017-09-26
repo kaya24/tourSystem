@@ -49,7 +49,7 @@
 	</td>
 	<td>
 	<button class="bt-samp31" type="submit"
-	onclick="this.form.BUTTON_ID.value='b602_PackageTourSearch';">
+	onclick="this.form.BUTTON_ID.value='B602PackageTourSearch';">
       検索
     </button>
 	</td>
