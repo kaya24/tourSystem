@@ -53,6 +53,7 @@ public class FrontController2 extends HttpServlet {
 			e.printStackTrace();
 		}
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp" + page);
+		// フォワード
 		rd.forward(req, res);
 	}
 }
