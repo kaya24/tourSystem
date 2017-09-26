@@ -40,10 +40,9 @@ public class FrontController2 extends HttpServlet {
 		}
 
 		try {
-			// Actionクラスの動的生成
-			Class<?> clazz = Class.forName("tsys.sales.web." + buttonid
-					+ "Action");
-			ActionInterface action = (ActionInterface)clazz.newInstance();
+			// Actionクラスの動的生成とインスタンス化
+			ActionInterface action = (ActionInterface) Class.forName(
+					"tsys.sales.web." + buttonid + "Action").newInstance();
 			page = action.execute(req);
 
 		} catch (ClassNotFoundException e) {
