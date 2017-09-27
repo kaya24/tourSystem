@@ -17,7 +17,7 @@ import tsys.sales.dao.ConnectionManager;
  * 注文情報管理を行うクラス
  *
  * @author kayashima
- * @version
+ * @version 1.0 2017/09/28
  */
 public class OrderManagerLogic {
 

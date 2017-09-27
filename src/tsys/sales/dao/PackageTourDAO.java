@@ -38,7 +38,6 @@ public class PackageTourDAO {
 		String sql = "select tour.itemcode, tourmaster.name as itemname, "
 				+ "destination.destinationcode, destination.name as destinationname, "
 				+ "tourmaster.days, tourmaster.nights, tour.Date, "
-				//+ "date_format(tour.Date, '%y%m') as ym, "
 				+ "tour.price, tour.firsthotelitemcode, "
 				+ "tour.outwardflightitemcode, tour.homewardflightitemcode, tour.stock, "
 				+ "tourmaster.basicprice, tourmaster.hotelcode, tourmaster.outwardflightcode, "
@@ -46,9 +45,10 @@ public class PackageTourDAO {
 				+ "from (( tour inner join tourmaster on tour.tourcode = tourmaster.tourcode ) "
 				+ "inner join destination on tourmaster.destinationcode = destination.destinationcode), category "
 				+ "where substr(tour.itemcode from 1 for 3) = category.categorycode "
-				+ "and destination.destinationcode=? and tour.Date like ?";
-				//+ "and date_format(tour.Date, '%y%m') = ?";
+				+ "and destination.destinationcode = ? and tour.Date like ?";
 
+		//+ "date_format(tour.Date, '%y%m') as ym, "
+		//+ "and date_format(tour.Date, '%y%m') = ?";
 		PreparedStatement stmt = null;
 		ResultSet res = null;
 		ArrayList<PackageTour> packageTourList = new ArrayList<>();
@@ -58,7 +58,7 @@ public class PackageTourDAO {
 			stmt.setString(1, destinationCode);
 			//String ym = year.substring(2,4) + month;
 			//stmt.setString(2, ym);
-			stmt.setString(2, "%"+year+"-"+month+"%");
+			stmt.setString(2, year + "-" + month + "%");
 			res = stmt.executeQuery();
 
 			while (res.next()) {

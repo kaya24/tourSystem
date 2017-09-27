@@ -14,9 +14,9 @@ public class MemberManagerLogic {
 
 		Connection con = null;
 		Member member = null;
-		MemberDAO mdao = new MemberDAO(con);
 		try {
 			con = ConnectionManager.getConnection();
+			MemberDAO mdao = new MemberDAO(con);
 			member = mdao.getMember(memberCode, password);
 			if(member == null){
 				throw new SalesBusinessException();

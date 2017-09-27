@@ -7,6 +7,12 @@ import tsys.sales.entity.Member;
 import tsys.sales.logic.MemberManagerLogic;
 import tsys.sales.logic.SalesBusinessException;
 
+/**
+ * ログイン画面の[ログイン]ボタン押下時のActionクラス
+ *
+ * @author kayashima
+ * @version 1.0 2017/09/28
+ */
 public class B101LoginAction implements ActionInterface{
 
 	public String execute(HttpServletRequest req){
@@ -14,6 +20,7 @@ public class B101LoginAction implements ActionInterface{
 
 		String memberCode = req.getParameter("memberCode");
 		String password = req.getParameter("password");
+		String isFromShoppingCart = req.getParameter("FromShoppingCart");
 
 		try{
 			MemberManagerLogic logic = new MemberManagerLogic();
@@ -23,8 +30,19 @@ public class B101LoginAction implements ActionInterface{
 				page = "/UC100/b101G01_Login.jsp";
 				req.setAttribute("errorMessage", "ログインに失敗しました。");
 			}
+			// セッションの生成
 			HttpSession session = req.getSession();
 			session.setAttribute("CommonLoginMember", member);
+
+			if( isFromShoppingCart.equals("1")){
+				// 注文確認画面へ遷移する
+				page = "";
+			}
+
+			if( member.getRole().equals("Employee")){
+				// 従業員トップ画面に遷移する
+				page = "";
+			}
 
 		}catch(SalesBusinessException e){
 			req.setAttribute("errorMessage", "メンバーコードとパスワードが一致しません．");

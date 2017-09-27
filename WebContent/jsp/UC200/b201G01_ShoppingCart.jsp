@@ -17,13 +17,13 @@
 			;
 		return num;
 	}
+
 	jQuery(function() {
 		/*初期値の計算*/
 		jQuery(document).ready(function() {
 			var all = 0;
 			var index = document.getElementsByClassName("unitPrice"); // 各商品のpriceタグの個数を取得
 			for (var i = 0; i < index.length; i++) {
-				// 初期数量指定 なぜか2になるので-1した。
 				//$(".quantity").eq(i).val($(".quant").eq(i).val());
 				// 小計、合計の計算
 				var quantity = $('.quantity').eq(i).val();
