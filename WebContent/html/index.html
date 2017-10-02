@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+<!--    
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+-->
+<script>
+  $(function(){
+    $("#mydata")
+      .on("invalid", function(e){
+      if ( e.currentTarget.validity.valueMissing ) {
+        this.setCustomValidity("必須入力です");
+      }
+      if ( e.currentTarget.validity.patternMismatch ) {
+        this.setCustomValidity("数値を入力して下さい");
+      }
+    })
+      .on("input",function(){
+      this.blur();
+      this.setCustomValidity("");
+      this.focus();
+    });
+  });
+</script>
+
+<form>
+  <!--input
+         type="text"
+         id="mydata"
+         name="mydata"
+         required
+         pattern="[0-9]+"-->
+  
+  <input type="text" id="mydata2" name="mydata2" pattern="[0-9]+" required>
+  <input type="button" id="button" value = "ボタン">
+  <input type="submit" id="submit" name="send" value="送信">
+</form>
+  </body>
+  <script>
+    (function(){
+      document.addEventListener("click", function(e){
+        var mydata2 =  document.getElementById("mydata2");
+        var s = mydata2.value;  
+
+        if(event.target.id === "button"){
+          console.log("ボタンクリック:");
+          if(s){
+            console.log( s + " が入力されました。");
+          }
+        }else if(event.target.id === "submit"){
+          console.log("送信ボタンクリック");
+          if(s === ""){
+            mydata2.setCustomValidity("必須入力");
+          }
+        }
+        // メッセージをリセット
+        //mydata2.blur();
+        //mydata2.setCustomValidity("");
+        //mydata2.focus();
+      }, false);
+    })();
+  </script>
+</html>
